@@ -1,0 +1,22 @@
+Using device: cuda
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-0_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+Traceback (most recent call last):
+  File "train.py", line 189, in <module>
+    train(net, args)
+  File "train.py", line 56, in train
+    for i, batch in enumerate(dataloader):
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\utils\data\dataloader.py", line 619, in __next__
+    data = self._next_data()
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\utils\data\dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\utils\data\_utils\fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\utils\data\_utils\fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "D:\hammer\folder\flood_unet\datasets\dataloader.py", line 31, in __getitem__
+    image_vv, image_vh, label = self.transform((image_vv, image_vh, label))
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+TypeError: Numpy2Torch() takes no arguments

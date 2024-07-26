@@ -1,0 +1,37 @@
+2024-07-25 11:11:23,948 INFO    MainThread:43182 [internal.py:wandb_internal():90] W&B internal server running at pid: 43182, started at: 2024-07-25 11:11:23.948158
+2024-07-25 11:11:23,951 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: run_start
+2024-07-25 11:11:23,951 INFO    WriterThread:43182 [datastore.py:open_for_write():75] open: /home_ext/whm_ext/hcq/7/flood_unet/wandb/offline-run-20240725_111122-1z2sfv0n/run-1z2sfv0n.wandb
+2024-07-25 11:11:23,979 DEBUG   HandlerThread:43182 [meta.py:__init__():35] meta init
+2024-07-25 11:11:23,979 DEBUG   HandlerThread:43182 [meta.py:__init__():49] meta init done
+2024-07-25 11:11:23,979 DEBUG   HandlerThread:43182 [meta.py:probe():209] probe
+2024-07-25 11:11:23,985 DEBUG   HandlerThread:43182 [git.py:repo():29] git repository is invalid
+2024-07-25 11:11:23,985 DEBUG   HandlerThread:43182 [meta.py:_save_pip():53] save pip
+2024-07-25 11:11:23,987 DEBUG   HandlerThread:43182 [meta.py:_save_pip():67] save pip done
+2024-07-25 11:11:23,987 DEBUG   HandlerThread:43182 [meta.py:_save_conda():74] save conda
+2024-07-25 11:11:49,030 DEBUG   HandlerThread:43182 [meta.py:_save_conda():84] save conda done
+2024-07-25 11:11:49,031 DEBUG   HandlerThread:43182 [meta.py:probe():247] probe done
+2024-07-25 11:21:07,246 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 11:22:11,208 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 11:23:14,467 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 11:41:42,990 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 11:42:47,028 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 11:43:49,657 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:02:17,559 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:03:27,030 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:04:33,375 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:23:01,047 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:24:04,966 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:25:07,530 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:43:35,556 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:44:39,199 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 12:45:42,870 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 13:04:09,824 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 13:05:15,175 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 13:06:19,341 DEBUG   HandlerThread:43182 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-25 13:16:33,897 WARNING MainThread:43182 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2024-07-25 13:16:36,901 WARNING MainThread:43182 [internal.py:is_dead():387] Internal process exiting, parent pid 42827 disappeared
+2024-07-25 13:16:36,901 ERROR   MainThread:43182 [internal.py:wandb_internal():149] Internal process shutdown.
+2024-07-25 13:16:37,342 INFO    SenderThread:43182 [sender.py:finish():1114] shutting down sender
+2024-07-25 13:16:37,727 INFO    WriterThread:43182 [datastore.py:close():279] close: /home_ext/whm_ext/hcq/7/flood_unet/wandb/offline-run-20240725_111122-1z2sfv0n/run-1z2sfv0n.wandb
+2024-07-25 13:16:37,741 INFO    HandlerThread:43182 [handler.py:finish():806] shutting down handler
+2024-07-25 13:16:37,744 INFO    MainThread:43182 [internal.py:handle_exit():80] Internal process exited

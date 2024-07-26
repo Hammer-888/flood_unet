@@ -1,0 +1,13 @@
+Using device: cuda:3
+Epoch 1/50
+  0%|                                                                                                                                    | 0/1313 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 212, in <module>
+    train(net, args)
+  File "train.py", line 72, in train
+    output = net(t1_img, t2_img)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 154, in forward
+    raise RuntimeError("module must have its parameters and buffers "
+RuntimeError: module must have its parameters and buffers on device cuda:1 (device_ids[0]) but found one of them on device: cuda:3

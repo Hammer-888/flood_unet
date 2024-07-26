@@ -1,0 +1,19 @@
+2024-07-20 00:24:12,547 INFO    MainThread:5928 [internal.py:wandb_internal():93] W&B internal server running at pid: 5928, started at: 2024-07-20 00:24:12.547556
+2024-07-20 00:24:12,548 INFO    WriterThread:5928 [datastore.py:open_for_write():75] open: D:\hammer\folder\flood_unet\wandb\offline-run-20240720_002411-3chws10g\run-3chws10g.wandb
+2024-07-20 00:24:12,549 DEBUG   HandlerThread:5928 [handler.py:handle_request():140] handle_request: run_start
+2024-07-20 00:24:12,568 DEBUG   HandlerThread:5928 [meta.py:__init__():35] meta init
+2024-07-20 00:24:12,568 DEBUG   HandlerThread:5928 [meta.py:__init__():49] meta init done
+2024-07-20 00:24:12,569 DEBUG   HandlerThread:5928 [meta.py:probe():209] probe
+2024-07-20 00:24:12,622 DEBUG   HandlerThread:5928 [git.py:repo():29] git repository is invalid
+2024-07-20 00:24:12,622 DEBUG   HandlerThread:5928 [meta.py:_save_pip():53] save pip
+2024-07-20 00:24:12,623 DEBUG   HandlerThread:5928 [meta.py:_save_pip():67] save pip done
+2024-07-20 00:24:12,623 DEBUG   HandlerThread:5928 [meta.py:_save_conda():74] save conda
+2024-07-20 00:24:24,191 DEBUG   HandlerThread:5928 [meta.py:_save_conda():84] save conda done
+2024-07-20 00:24:24,191 DEBUG   HandlerThread:5928 [meta.py:probe():247] probe done
+2024-07-20 00:24:40,412 WARNING MainThread:5928 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2024-07-20 00:24:41,707 WARNING MainThread:5928 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2024-07-20 00:24:41,707 ERROR   MainThread:5928 [internal.py:wandb_internal():156] Internal process interrupted.
+2024-07-20 00:24:41,821 INFO    SenderThread:5928 [sender.py:finish():1114] shutting down sender
+2024-07-20 00:24:42,565 INFO    WriterThread:5928 [datastore.py:close():279] close: D:\hammer\folder\flood_unet\wandb\offline-run-20240720_002411-3chws10g\run-3chws10g.wandb
+2024-07-20 00:24:42,565 INFO    HandlerThread:5928 [handler.py:finish():806] shutting down handler
+2024-07-20 00:24:42,566 INFO    MainThread:5928 [internal.py:handle_exit():80] Internal process exited

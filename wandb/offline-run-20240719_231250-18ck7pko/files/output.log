@@ -1,0 +1,8 @@
+
+Using device: cuda
+Traceback (most recent call last):
+  File "train.py", line 189, in <module>
+    train(net, args)
+  File "train.py", line 31, in train
+    dataset = FloodDataset(train=True, crop_size=cfg.crop_size)
+AttributeError: 'Namespace' object has no attribute 'crop_size'

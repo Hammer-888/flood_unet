@@ -1,0 +1,13 @@
+Using device: cuda
+Epoch 1/50
+epoch 0 / 50
+avg training loss 0.44752
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 62/62 [10:44<00:00, 10.40s/it]
+Traceback (most recent call last):
+  File "train.py", line 190, in <module>
+    train(net, args)
+  File "train.py", line 95, in train
+    epoch=epoch, step=global_step)
+  File "train.py", line 115, in model_evaluation
+    dataset = FloodDataset(train=False, crop_size=cfg.crop_size)
+AttributeError: 'Namespace' object has no attribute 'crop_size'

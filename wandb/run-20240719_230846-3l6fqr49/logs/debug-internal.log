@@ -1,0 +1,66 @@
+2024-07-19 23:08:48,456 INFO    MainThread:3636 [internal.py:wandb_internal():93] W&B internal server running at pid: 3636, started at: 2024-07-19 23:08:48.455766
+2024-07-19 23:08:48,457 INFO    WriterThread:3636 [datastore.py:open_for_write():75] open: D:\hammer\folder\flood_unet\wandb\run-20240719_230846-3l6fqr49\run-3l6fqr49.wandb
+2024-07-19 23:08:48,460 DEBUG   SenderThread:3636 [sender.py:send():236] send: header
+2024-07-19 23:08:48,460 DEBUG   SenderThread:3636 [sender.py:send():236] send: run
+2024-07-19 23:08:51,624 ERROR   SenderThread:3636 [retry.py:__call__():132] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\urllib3\connectionpool.py", line 700, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\urllib3\connectionpool.py", line 994, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\urllib3\connection.py", line 364, in connect
+    self.sock = conn = self._connect_tls_proxy(hostname, conn)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\urllib3\connection.py", line 505, in _connect_tls_proxy
+    ssl_context=ssl_context,
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\urllib3\util\ssl_.py", line 453, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\urllib3\util\ssl_.py", line 495, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\ssl.py", line 412, in wrap_socket
+    session=session
+  File "C:\Users\Administrator\.conda\envs\torch\lib\ssl.py", line 853, in _create
+    self.do_handshake()
+  File "C:\Users\Administrator\.conda\envs\torch\lib\ssl.py", line 1117, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\requests\adapters.py", line 450, in send
+    timeout=timeout
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\urllib3\connectionpool.py", line 786, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Cannot connect to proxy.', OSError(0, 'Error')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\wandb\sdk\lib\retry.py", line 108, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 158, in execute
+    return self.client.execute(*args, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\transport\requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\requests\api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Cannot connect to proxy.', OSError(0, 'Error')))
+2024-07-19 23:09:00,604 WARNING MainThread:3636 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2024-07-19 23:09:00,851 WARNING MainThread:3636 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2024-07-19 23:09:00,851 ERROR   MainThread:3636 [internal.py:wandb_internal():156] Internal process interrupted.
+2024-07-19 23:09:01,557 INFO    HandlerThread:3636 [handler.py:finish():806] shutting down handler
+2024-07-19 23:09:01,557 INFO    WriterThread:3636 [datastore.py:close():279] close: D:\hammer\folder\flood_unet\wandb\run-20240719_230846-3l6fqr49\run-3l6fqr49.wandb

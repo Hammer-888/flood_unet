@@ -1,0 +1,18 @@
+
+Using device: cuda
+Traceback (most recent call last):
+  File "train.py", line 189, in <module>
+    train(net, args)
+  File "train.py", line 56, in train
+    for i, batch in enumerate(dataloader):
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\utils\data\dataloader.py", line 619, in __next__
+    data = self._next_data()
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\utils\data\dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\utils\data\_utils\fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\utils\data\_utils\fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "D:\hammer\folder\flood_unet\datasets\dataloader.py", line 26, in __getitem__
+    image_vv = cv2.colorChanger(image_vv, cv2.COLOR_BGR2RGB)
+AttributeError: module 'cv2' has no attribute 'colorChanger'

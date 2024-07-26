@@ -1,0 +1,35 @@
+Using device: cuda
+Epoch 1/50
+  0%|                                                                                                                                                                 | 0/62 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 191, in <module>
+    train(net, args)
+  File "train.py", line 67, in train
+    output = net(t1_img, t2_img)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\module.py", line 1198, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\hammer\folder\flood_unet\network\model.py", line 51, in forward
+    s1_feature = self.s1_stream(t1_img)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\module.py", line 1198, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\hammer\folder\flood_unet\network\model.py", line 115, in forward
+    x1 = self.inc(x)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\module.py", line 1198, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\hammer\folder\flood_unet\network\model.py", line 161, in forward
+    x = self.conv(x)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\module.py", line 1198, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\hammer\folder\flood_unet\network\model.py", line 151, in forward
+    x = self.conv(x)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\module.py", line 1198, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\container.py", line 141, in forward
+    input = module(input)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\module.py", line 1198, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\conv.py", line 447, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\conv.py", line 444, in _conv_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: Given groups=1, weight of size [64, 3, 3, 3], expected input[16, 1, 256, 256] to have 3 channels, but got 1 channels instead

@@ -1,0 +1,18 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.7.1",
+    "heartbeatAt": "2024-07-19T15:24:37.468929",
+    "startedAt": "2024-07-19T15:24:36.026424",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "host": "DESKTOP-K2VCI74",
+    "username": "Administrator",
+    "executable": "C:\\Users\\Administrator\\.conda\\envs\\torch\\python.exe"
+}

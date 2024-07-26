@@ -1,0 +1,19 @@
+2024-07-20 00:25:25,581 INFO    MainThread:15012 [internal.py:wandb_internal():93] W&B internal server running at pid: 15012, started at: 2024-07-20 00:25:25.581663
+2024-07-20 00:25:25,583 INFO    WriterThread:15012 [datastore.py:open_for_write():75] open: D:\hammer\folder\flood_unet\wandb\offline-run-20240720_002524-djelrw6z\run-djelrw6z.wandb
+2024-07-20 00:25:25,583 DEBUG   HandlerThread:15012 [handler.py:handle_request():140] handle_request: run_start
+2024-07-20 00:25:25,604 DEBUG   HandlerThread:15012 [meta.py:__init__():35] meta init
+2024-07-20 00:25:25,604 DEBUG   HandlerThread:15012 [meta.py:__init__():49] meta init done
+2024-07-20 00:25:25,604 DEBUG   HandlerThread:15012 [meta.py:probe():209] probe
+2024-07-20 00:25:25,652 DEBUG   HandlerThread:15012 [git.py:repo():29] git repository is invalid
+2024-07-20 00:25:25,653 DEBUG   HandlerThread:15012 [meta.py:_save_pip():53] save pip
+2024-07-20 00:25:25,653 DEBUG   HandlerThread:15012 [meta.py:_save_pip():67] save pip done
+2024-07-20 00:25:25,653 DEBUG   HandlerThread:15012 [meta.py:_save_conda():74] save conda
+2024-07-20 00:25:36,606 DEBUG   HandlerThread:15012 [meta.py:_save_conda():84] save conda done
+2024-07-20 00:25:36,606 DEBUG   HandlerThread:15012 [meta.py:probe():247] probe done
+2024-07-20 00:28:08,146 WARNING MainThread:15012 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2024-07-20 00:28:16,234 WARNING MainThread:15012 [internal.py:is_dead():388] Internal process exiting, parent pid 1292 disappeared
+2024-07-20 00:28:16,234 ERROR   MainThread:15012 [internal.py:wandb_internal():149] Internal process shutdown.
+2024-07-20 00:28:16,681 INFO    HandlerThread:15012 [handler.py:finish():806] shutting down handler
+2024-07-20 00:28:16,681 INFO    WriterThread:15012 [datastore.py:close():279] close: D:\hammer\folder\flood_unet\wandb\offline-run-20240720_002524-djelrw6z\run-djelrw6z.wandb
+2024-07-20 00:28:17,139 INFO    SenderThread:15012 [sender.py:finish():1114] shutting down sender
+2024-07-20 00:28:17,139 INFO    MainThread:15012 [internal.py:handle_exit():80] Internal process exited

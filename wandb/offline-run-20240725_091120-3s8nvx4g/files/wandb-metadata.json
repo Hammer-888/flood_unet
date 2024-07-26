@@ -1,0 +1,18 @@
+{
+    "os": "Linux-5.4.0-150-generic-x86_64-with-glibc2.17",
+    "python": "3.8.10",
+    "heartbeatAt": "2024-07-25T01:11:21.221390",
+    "startedAt": "2024-07-25T01:11:20.064954",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 4,
+    "cpu_count": 48,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "host": "datalab",
+    "username": "whm",
+    "executable": "/home_ext/whm_ext/miniconda3/envs/camera/bin/python"
+}

@@ -1,0 +1,34 @@
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_setup.py:_flush():76] Configure stats pid to 39419
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_setup.py:_flush():76] Loading settings from /home_ext/whm_ext/.config/wandb/settings
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_setup.py:_flush():76] Loading settings from /home_ext/whm_ext/hcq/7/flood_unet/wandb/settings
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'mode': 'offline'}
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': 'train.py'}
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_init.py:_log_setup():461] Logging user logs to /home_ext/whm_ext/hcq/7/flood_unet/wandb/offline-run-20240722_085452-3s0we9rj/logs/debug.log
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_init.py:_log_setup():462] Logging internal logs to /home_ext/whm_ext/hcq/7/flood_unet/wandb/offline-run-20240722_085452-3s0we9rj/logs/debug-internal.log
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_init.py:init():495] calling init triggers
+2024-07-22 08:54:52,983 INFO    MainThread:39419 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {}
+2024-07-22 08:54:52,984 INFO    MainThread:39419 [wandb_init.py:init():548] starting backend
+2024-07-22 08:54:52,984 INFO    MainThread:39419 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-07-22 08:54:52,998 INFO    MainThread:39419 [backend.py:ensure_launched():217] starting backend process...
+2024-07-22 08:54:53,010 INFO    MainThread:39419 [backend.py:ensure_launched():222] started backend process with pid: 40518
+2024-07-22 08:54:53,012 INFO    MainThread:39419 [wandb_init.py:init():558] backend started and connected
+2024-07-22 08:54:53,016 INFO    MainThread:39419 [wandb_init.py:init():634] updated telemetry
+2024-07-22 08:54:53,018 INFO    MainThread:39419 [wandb_init.py:init():700] starting run threads in backend
+2024-07-22 08:54:58,024 INFO    MainThread:39419 [wandb_run.py:_console_start():1893] atexit reg
+2024-07-22 08:54:58,032 INFO    MainThread:39419 [wandb_run.py:_redirect():1766] redirect: SettingsConsole.REDIRECT
+2024-07-22 08:54:58,033 INFO    MainThread:39419 [wandb_run.py:_redirect():1771] Redirecting console.
+2024-07-22 08:54:58,038 INFO    MainThread:39419 [wandb_run.py:_redirect():1827] Redirects installed.
+2024-07-22 08:54:58,038 INFO    MainThread:39419 [wandb_init.py:init():732] run started, returning control to user process
+2024-07-22 08:55:02,891 INFO    MainThread:39419 [wandb_run.py:_atexit_cleanup():1862] got exitcode: 1
+2024-07-22 08:55:02,892 INFO    MainThread:39419 [wandb_run.py:_restore():1834] restore
+2024-07-22 08:55:06,710 INFO    MainThread:39419 [wandb_run.py:_on_finish():1991] got exit ret: 
+2024-07-22 08:55:06,845 INFO    MainThread:39419 [wandb_run.py:_on_finish():1991] got exit ret: 
+2024-07-22 08:55:06,947 INFO    MainThread:39419 [wandb_run.py:_on_finish():1991] got exit ret: done: true
+exit_result {
+}
+local_info {
+}
+
+2024-07-22 08:55:08,133 INFO    MainThread:39419 [wandb_run.py:_footer_history_summary_info():3099] rendering history
+2024-07-22 08:55:08,134 INFO    MainThread:39419 [wandb_run.py:_footer_history_summary_info():3131] rendering summary

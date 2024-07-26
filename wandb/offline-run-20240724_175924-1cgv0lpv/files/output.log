@@ -1,0 +1,13 @@
+Using device: cuda:1
+Epoch 1/50
+  0%|                                                                                                                                     | 0/218 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 212, in <module>
+    train(net, args)
+  File "train.py", line 76, in train
+    loss.backward()
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+RuntimeError: Unable to find a valid cuDNN algorithm to run convolution

@@ -1,0 +1,21 @@
+2024-07-26 17:15:23,289 INFO    MainThread:43709 [internal.py:wandb_internal():90] W&B internal server running at pid: 43709, started at: 2024-07-26 17:15:23.289239
+2024-07-26 17:15:23,292 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: run_start
+2024-07-26 17:15:23,293 INFO    WriterThread:43709 [datastore.py:open_for_write():75] open: /home_ext/whm_ext/hcq/7/flood_unet/wandb/offline-run-20240726_171522-2ifje4jr/run-2ifje4jr.wandb
+2024-07-26 17:15:23,321 DEBUG   HandlerThread:43709 [meta.py:__init__():35] meta init
+2024-07-26 17:15:23,322 DEBUG   HandlerThread:43709 [meta.py:__init__():49] meta init done
+2024-07-26 17:15:23,322 DEBUG   HandlerThread:43709 [meta.py:probe():209] probe
+2024-07-26 17:15:23,328 DEBUG   HandlerThread:43709 [git.py:repo():29] git repository is invalid
+2024-07-26 17:15:23,328 DEBUG   HandlerThread:43709 [meta.py:_save_pip():53] save pip
+2024-07-26 17:15:23,329 DEBUG   HandlerThread:43709 [meta.py:_save_pip():67] save pip done
+2024-07-26 17:15:23,330 DEBUG   HandlerThread:43709 [meta.py:_save_conda():74] save conda
+2024-07-26 17:15:37,844 DEBUG   HandlerThread:43709 [meta.py:_save_conda():84] save conda done
+2024-07-26 17:15:37,845 DEBUG   HandlerThread:43709 [meta.py:probe():247] probe done
+2024-07-26 17:20:32,532 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-26 17:21:56,429 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-26 17:23:20,256 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-26 17:33:23,363 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-26 17:34:48,067 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-26 17:36:11,868 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-26 17:46:14,646 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-26 17:47:37,996 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-26 17:49:00,545 DEBUG   HandlerThread:43709 [handler.py:handle_request():140] handle_request: partial_history

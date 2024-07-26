@@ -1,0 +1,93 @@
+Using device: cuda
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-0_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-10_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-11_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-12_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-13_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-14_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-15_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-17_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-18_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-19_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-1_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-20_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-21_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-22_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-23_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+image_vv_name data/train\vv\bangladesh_20170314t115609_x-0_y-24_vv.png
+image_vv (256, 256, 3)
+image_vh (256, 256, 3)
+3
+(256, 256, 3) (256, 256, 3) (256, 256, 3)
+Traceback (most recent call last):
+  File "train.py", line 189, in <module>
+    train(net, args)
+  File "train.py", line 67, in train
+    loss = criterion(output, label)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\module.py", line 1198, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\modules\loss.py", line 716, in forward
+    reduction=self.reduction)
+  File "C:\Users\Administrator\.conda\envs\torch\lib\site-packages\torch\nn\functional.py", line 3130, in binary_cross_entropy_with_logits
+    raise ValueError("Target size ({}) must be the same as input size ({})".format(target.size(), input.size()))
+ValueError: Target size (torch.Size([16, 3, 256, 256])) must be the same as input size (torch.Size([16, 1, 256, 256]))
