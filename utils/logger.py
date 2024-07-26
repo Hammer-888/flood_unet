@@ -8,15 +8,21 @@ class MyWriter(SummaryWriter):
     def __init__(self, logdir):
         super(MyWriter, self).__init__(logdir)
 
-    def log_training(self, dice_loss, dice, jaccard, epoch):
-        self.add_scalar("training/dice_loss", dice_loss, epoch)
-        self.add_scalar("training/dice", dice, epoch)
-        self.add_scalar("training/jaccard", jaccard, epoch)
+    def log_training(self, loss, precision, recall, oa, f1, iou, epoch):
+        self.add_scalar("training/loss", loss, epoch)
+        self.add_scalar("training/precision", precision, epoch)
+        self.add_scalar("training/recall", recall, epoch)
+        self.add_scalar("training/oa", oa, epoch)
+        self.add_scalar("training/f1", f1, epoch)
+        self.add_scalar("training/iou", iou, epoch)
 
-    def log_validation(self, dice_loss, dice, jaccard, epoch):
-        self.add_scalar("validation/dice_loss", dice_loss, epoch)
-        self.add_scalar("validation/dice", dice, epoch)
-        self.add_scalar("validation/jaccard", jaccard, epoch)
+    def log_validation(self, loss, precision, recall, oa, f1, iou, epoch):
+        self.add_scalar("validation/loss", loss, epoch)
+        self.add_scalar("validation/precision", precision, epoch)
+        self.add_scalar("validation/recall", recall, epoch)
+        self.add_scalar("validation/oa", oa, epoch)
+        self.add_scalar("validation/f1", f1, epoch)
+        self.add_scalar("validation/iou", iou, epoch)
 
     def log_images(self, map, target, prediction, epoch):
         if len(map.shape) > 3:

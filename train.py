@@ -65,6 +65,7 @@ def train(net, cfg, writer):
 
             t1_img = batch["vv"].to(device)
             t2_img = batch["vh"].to(device)
+            rgb_img = batch["rgb"].to(device)
 
             label = batch["label"].to(device)
 
