@@ -24,14 +24,20 @@ class MyWriter(SummaryWriter):
         self.add_scalar("validation/f1", f1, epoch)
         self.add_scalar("validation/iou", iou, epoch)
 
-    def log_images(self, map, target, prediction, epoch):
-        if len(map.shape) > 3:
-            map = map.squeeze(0)
+    def log_images(self, rgb,vh,vv, target, prediction, epoch):
+        if len(rgb.shape) > 3:
+            rgb = rgb.squeeze(0)
         if len(target.shape) > 2:
             target = target.squeeze()
         if len(prediction.shape) > 2:
             prediction = prediction.squeeze()
-        self.add_image("map", map, epoch)
+        if len(vh.shape) > 3:
+            vh = vh.squeeze(0)
+        if len(vv.shape) > 3:
+            vv = vv.squeeze(0)
+        self.add_image("vh", vh, epoch)
+        self.add_image("vv", vv, epoch)
+        self.add_image("rgb", rgb, epoch)
         self.add_image("mask", target.unsqueeze(0), epoch)
         self.add_image("prediction", prediction.unsqueeze(0), epoch)
 
