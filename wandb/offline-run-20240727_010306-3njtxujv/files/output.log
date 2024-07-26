@@ -1,0 +1,65 @@
+Using device: cuda:3
+Epoch 1/50
+Computing Train Indicator  epoch 0 / 50
+avg training loss 0.62319
+Computing Val Train Indicator
+  0%|                                                                                                             | 0/656 [00:00<?, ?it/s]/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 656/656 [05:10<00:00,  2.11it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+Traceback (most recent call last):
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/PIL/Image.py", line 2992, in fromarray
+    mode, rawmode = _fromarray_typemap[typekey]
+KeyError: ((1, 1, 256), '|u1')
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "train.py", line 259, in <module>
+    train(net, args, writer)
+  File "train.py", line 120, in train
+    train_maxF1, train_maxTresh = model_evaluation(
+  File "train.py", line 199, in model_evaluation
+    writer.log_images(rgb_img, t1_img, t2_img, y_true, y_pred, epoch)
+  File "/home_ext/whm_ext/hcq/7/flood_unet/utils/logger.py", line 40, in log_images
+    self.add_image("rgb", rgb, epoch)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/tensorboardX/writer.py", line 686, in add_image
+    summary = image(tag, img_tensor, dataformats=dataformats)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/tensorboardX/summary.py", line 287, in image
+    image = make_image(tensor, rescale=rescale)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/tensorboardX/summary.py", line 327, in make_image
+    image = Image.fromarray(tensor)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/PIL/Image.py", line 2994, in fromarray
+    raise TypeError("Cannot handle this data type: %s, %s" % typekey) from e
+TypeError: Cannot handle this data type: (1, 1, 256), |u1

@@ -22,9 +22,9 @@ class FloodDataset(Dataset):
             self.root = "data/train"
         else:
             self.root = "data/val"
-        self.vv_files = os.listdir(os.path.join(self.root, "vv"))
-        self.vh_files = os.listdir(os.path.join(self.root, "vh"))
-        self.label_files = os.listdir(os.path.join(self.root, "label"))
+        self.vv_files = os.listdir(os.path.join(self.root, "vv"))[:1000]
+        self.vh_files = os.listdir(os.path.join(self.root, "vh"))[:1000]
+        self.label_files = os.listdir(os.path.join(self.root, "label"))[:1000]
         self.transform = Numpy2Torch()
 
     def __len__(self):
@@ -40,13 +40,14 @@ class FloodDataset(Dataset):
             cv2.imread(fiel_path.replace("label", "vh").replace(".png", "_vh.png"), 0)
             / 255.0
         )
-        rgb_image = s1_to_rgb(image_vv, image_vh).transpose((2, 0, 1)).astype("float32")
+        rgb_image = s1_to_rgb(image_vv, image_vh).astype("float32")
+        rgb_image = cv2.cvtColor(rgb_image, cv2.COLOR_BGR2RGB)
         label = cv2.imread(fiel_path, 0) / 255.0
         image_vv, image_vh, label = self.transform(
             (
                 image_vv.astype("float32"),
                 image_vh.astype("float32"),
-                label.astype("int64"),
+                label.astype("float32"),
             )
         )
         rgb_image = TF.to_tensor(rgb_image)

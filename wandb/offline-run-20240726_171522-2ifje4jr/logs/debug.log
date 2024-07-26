@@ -20,3 +20,15 @@ config: {}
 2024-07-26 17:15:27,378 INFO    MainThread:43212 [wandb_run.py:_redirect():1771] Redirecting console.
 2024-07-26 17:15:27,380 INFO    MainThread:43212 [wandb_run.py:_redirect():1827] Redirects installed.
 2024-07-26 17:15:27,380 INFO    MainThread:43212 [wandb_init.py:init():732] run started, returning control to user process
+2024-07-26 22:35:36,988 INFO    MainThread:43212 [wandb_run.py:_atexit_cleanup():1862] got exitcode: 0
+2024-07-26 22:35:36,990 INFO    MainThread:43212 [wandb_run.py:_restore():1834] restore
+2024-07-26 22:35:39,569 INFO    MainThread:43212 [wandb_run.py:_on_finish():1991] got exit ret: 
+2024-07-26 22:35:39,788 INFO    MainThread:43212 [wandb_run.py:_on_finish():1991] got exit ret: 
+2024-07-26 22:35:39,891 INFO    MainThread:43212 [wandb_run.py:_on_finish():1991] got exit ret: done: true
+exit_result {
+}
+local_info {
+}
+
+2024-07-26 22:35:41,077 INFO    MainThread:43212 [wandb_run.py:_footer_history_summary_info():3099] rendering history
+2024-07-26 22:35:41,080 INFO    MainThread:43212 [wandb_run.py:_footer_history_summary_info():3131] rendering summary

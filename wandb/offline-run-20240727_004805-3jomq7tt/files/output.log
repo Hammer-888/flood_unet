@@ -1,0 +1,26 @@
+Using device: cuda:3
+Epoch 1/50
+Computing Train Indicator
+  0%|                                                                                                             | 0/656 [00:00<?, ?it/s]/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 656/656 [05:10<00:00,  2.11it/s]
+Traceback (most recent call last):
+  File "train.py", line 259, in <module>
+    train(net, args, writer)
+  File "train.py", line 97, in train
+    train_measurer.compute_precision.max(),
+AttributeError: 'function' object has no attribute 'max'

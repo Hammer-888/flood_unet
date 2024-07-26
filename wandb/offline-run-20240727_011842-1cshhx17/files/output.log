@@ -1,0 +1,59 @@
+Using device: cuda:3
+Epoch 1/50
+Computing Train Indicator  epoch 0 / 50
+avg training loss 0.81394
+rgb shape torch.Size([1, 3, 256, 256])
+Computing Val Train Indicator
+  0%|                                                                                                              | 0/62 [00:00<?, ?it/s]/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 62/62 [00:29<00:00,  2.09it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+Traceback (most recent call last):
+  File "train.py", line 259, in <module>
+    train(net, args, writer)
+  File "train.py", line 120, in train
+    train_maxF1, train_maxTresh = model_evaluation(
+  File "train.py", line 199, in model_evaluation
+    writer.log_images(rgb_img, t1_img, t2_img, y_true, y_pred, epoch)
+  File "/home_ext/whm_ext/hcq/7/flood_unet/utils/logger.py", line 38, in log_images
+    self.add_image("vh", vh, epoch)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/tensorboardX/writer.py", line 686, in add_image
+    summary = image(tag, img_tensor, dataformats=dataformats)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/tensorboardX/summary.py", line 282, in image
+    tensor = convert_to_HWC(tensor, dataformats)
+  File "/home_ext/whm_ext/miniconda3/envs/camera/lib/python3.8/site-packages/tensorboardX/utils.py", line 110, in convert_to_HWC
+    assert(len(tensor.shape) == len(input_format)), "size of input tensor and input format are different. \
+AssertionError: size of input tensor and input format are different.         tensor shape: (256, 256), input_format: CHW

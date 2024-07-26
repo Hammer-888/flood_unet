@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.4.0-150-generic-x86_64-with-glibc2.17",
+    "python": "3.8.10",
+    "heartbeatAt": "2024-07-26T17:22:15.372635",
+    "startedAt": "2024-07-26T17:22:14.382876",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 4,
+    "cpu_count": 48,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/Hammer-888/flood_unet.git",
+        "commit": "c60132bbe773e5e96aca807e39ebbe6a54dd278a"
+    },
+    "email": "creepui@gmail.com",
+    "root": "/home_ext/whm_ext/hcq/7/flood_unet",
+    "host": "datalab",
+    "username": "whm",
+    "executable": "/home_ext/whm_ext/miniconda3/envs/camera/bin/python"
+}

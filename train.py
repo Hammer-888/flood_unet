@@ -20,7 +20,7 @@ from utils.logger import MyWriter
 import wandb
 
 
-def train(net, cfg, writer:MyWriter):
+def train(net, cfg, writer: MyWriter):
 
     # setting device on GPU if available, else CPU
     # os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3"
@@ -58,13 +58,13 @@ def train(net, cfg, writer:MyWriter):
     )
 
     for epoch in range(epochs):
-        print("Epoch {}/{}".format(epoch + 1, epochs))
+        print("Epoch {}/{}".format(epoch, epochs))
         loss_tracker = 0
         net.train()
-        
+
         train_thresholds = torch.linspace(0, 1, 101).to(device)
         train_measurer = evaluation_metrics.MultiThresholdMetric(train_thresholds)
-        
+
         for batch in tqdm.tqdm(dataloader):
 
             t1_img = batch["vv"].to(device)
@@ -81,19 +81,27 @@ def train(net, cfg, writer:MyWriter):
             loss_tracker += loss.item()
             loss.backward()
             optimizer.step()
-            
+
             y_pred = torch.sigmoid(output)
             y_true = label.detach()
             y_pred = y_pred.detach()
             train_measurer.add_sample(y_true, y_pred)
-            
+
             positive_pixels += torch.sum(label).item()
             pixels += torch.numel(label)
 
             global_step += 1
         print(f"Computing Train Indicator ", end=" ", flush=True)
-        writer.log_training(loss_tracker / batches,train_measurer.compute_precision.max(),train_measurer.compute_recall.max(),train_measurer.compute_oa.max(),train_measurer.compute_f1.max(),train_measurer.compute_iou.max(),epoch)
-        if epoch % 2 == 0:
+        writer.log_training(
+            loss_tracker / batches,
+            train_measurer.compute_precision().max(),
+            train_measurer.compute_recall().max(),
+            train_measurer.compute_oa().max(),
+            train_measurer.compute_f1().max(),
+            train_measurer.compute_iou().max(),
+            epoch,
+        )
+        if epoch % 1 == 0:
             print(f"epoch {epoch} / {cfg.epochs}")
 
             # printing and logging loss
@@ -109,7 +117,7 @@ def train(net, cfg, writer:MyWriter):
             # model evaluation
             # train (different thresholds are tested)
             train_thresholds = torch.linspace(0, 1, 101).to(device)
-            train_maxF1, train_maxTresh = model_evaluation(
+            model_evaluation(
                 net,
                 cfg,
                 device,
@@ -119,7 +127,7 @@ def train(net, cfg, writer:MyWriter):
                 step=global_step,
                 batches=batches,
                 criterion=criterion,
-                writer=writer
+                writer=writer,
             )
             # test (using the best training threshold)
             # test_threshold = torch.tensor([train_maxTresh])
@@ -140,7 +148,18 @@ def train(net, cfg, writer:MyWriter):
             torch.save(net.state_dict(), net_file)
 
 
-def model_evaluation(net, cfg, device, thresholds, run_type, epoch,step, batches,criterion,writer:MyWriter):
+def model_evaluation(
+    net,
+    cfg,
+    device,
+    thresholds,
+    run_type,
+    epoch,
+    step,
+    batches,
+    criterion,
+    writer: MyWriter,
+):
     thresholds = thresholds.to(device)
     y_true_set = []
     y_pred_set = []
@@ -166,7 +185,7 @@ def model_evaluation(net, cfg, device, thresholds, run_type, epoch,step, batches
 
             y_pred = net(t1_img, t2_img)
             loss = criterion(y_pred, y_true)
-            loss_tracker+=loss.item()
+            loss_tracker += loss.item()
             y_pred = torch.sigmoid(y_pred)
 
             y_true = y_true.detach()
@@ -175,9 +194,13 @@ def model_evaluation(net, cfg, device, thresholds, run_type, epoch,step, batches
             y_pred_set.append(y_pred.cpu())
 
             measurer.add_sample(y_true, y_pred)
-    
+    # print("vh shape", t1_img.shape)
+    # print("vv shape", t2_img.shape)
+    # print("rgb shape", rgb_img.shape)
+    # print("y_true shape", y_true.shape)
+    # print("y_pred shape", y_pred.shape)
     print(f"Computing {run_type} Train Indicator ", end=" ", flush=True)
-    writer.log_images(rgb_img,t1_img,t2_img,y_true, y_pred, epoch)
+    writer.log_images(rgb_img, t1_img, t2_img, y_true, y_pred, epoch)
     f1 = measurer.compute_f1()
     fpr, fnr = measurer.compute_basic_metrics()
     maxF1 = f1.max()
@@ -185,7 +208,15 @@ def model_evaluation(net, cfg, device, thresholds, run_type, epoch,step, batches
     best_fpr = fpr[argmaxF1]
     best_fnr = fnr[argmaxF1]
     best_thresh = thresholds[argmaxF1]
-    writer.log_validation(loss_tracker/batches,measurer.compute_precision.max(),measurer.compute_recall.max(),measurer.compute_oa.max(),measurer.compute_f1.max(),measurer.compute_iou.max(),epoch)
+    writer.log_validation(
+        loss_tracker / batches,
+        measurer.compute_precision().max(),
+        measurer.compute_recall().max(),
+        measurer.compute_oa().max(),
+        measurer.compute_f1().max(),
+        measurer.compute_iou().max(),
+        epoch,
+    )
     wandb.log(
         {
             f"{run_type} max F1": maxF1,

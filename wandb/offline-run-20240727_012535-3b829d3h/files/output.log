@@ -1,0 +1,53 @@
+Using device: cuda:3
+Epoch 1/50
+Computing Train Indicator  epoch 0 / 50
+avg training loss 0.81394
+vh shape torch.Size([1, 1, 256, 256])
+vv shape torch.Size([1, 1, 256, 256])
+rgb shape torch.Size([1, 3, 256, 256])
+y_true shape torch.Size([1, 1, 256, 256])
+y_pred shape torch.Size([1, 1, 256, 256])
+Computing Val Train Indicator  0.590
+  0%|                                                                                                              | 0/62 [00:00<?, ?it/s]/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 62/62 [00:29<00:00,  2.09it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: divide by zero encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+/home_ext/whm_ext/hcq/7/flood_unet/datasets/dataloader.py:14: RuntimeWarning: invalid value encountered in divide
+  ratio_image = np.clip(np.nan_to_num(vh_image / vv_image, 0), 0, 1)
+Traceback (most recent call last):
+  File "train.py", line 263, in <module>
+    train(net, args, writer)
+  File "train.py", line 120, in train
+    train_maxF1, train_maxTresh = model_evaluation(
+TypeError: cannot unpack non-iterable NoneType object
