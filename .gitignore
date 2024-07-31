@@ -2,4 +2,4 @@
 /outputs
 /logs
 /wandb
-result/*
+/result
