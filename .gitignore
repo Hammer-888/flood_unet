@@ -1,2 +1,6 @@
 /data
 /outputs
+/logs
+/wandb
+outputs/*
+results/*
